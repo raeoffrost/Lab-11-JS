@@ -17,6 +17,14 @@
         }
         toString() {
         //     toString(): Returns a string representation of the product (e.g., "Product: Apple, Price: $2.50, Quantity: 50").
+        // added toFixed(2) to ensure number would output with 2 decimal places even if they are not added
         return `Product: ${this.name}, Price: $${this.price.toFixed(2)}, Quantity: ${this.quantity}`;
         }
     }
+    // testing
+    let apple = new ProductProperties("Apple", 0.79, 24);
+    let candy = new ProductProperties("Candy", 1, 24);
+    console.log(apple.getTotalValue());
+    console.log(apple.toString());
+    console.log(candy.getTotalValue());
+    console.log(candy.toString());
