@@ -91,14 +91,25 @@
         }
         // Returns the total value of all products in the inventory.
         getInventoryValue(){
-
+           const items = this.product;
+           let total = 0;
+           items.forEach((item) => {
+            let fullPrice = item.getTotalValue()
+            total += fullPrice;
+           });
+           return total;
         }
         // Finds a product by its name and returns it, or returns null if not found.
         findProductByName(name){
 
         }
     }
+    
     let grocery = new Store([apple, milk, candy]);
     console.log("Old Product List:" + JSON.stringify(grocery));
     grocery.addProduct(soup);
     console.log("New Product List:" + JSON.stringify(grocery));
+
+    const item = Object.getOwnPropertyDescriptors(grocery);
+   
+    console.log(grocery.getInventoryValue());
