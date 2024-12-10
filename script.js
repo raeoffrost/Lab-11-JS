@@ -21,6 +21,15 @@
         // added toFixed(2) to ensure number would output with 2 decimal places even if they are not added
         return `Product: ${this.name}, Price: $${this.price.toFixed(2)}, Quantity: ${this.quantity}`;
         }
+        // Add a Static Method to the Product Class Method for discounts
+        static applyDiscount(products, discount){
+        let newPrice = 0;
+        products.forEach((products) => {
+                newPrice = (products.price - (products.price * discount));
+                products.price = newPrice;
+            });
+            return products;
+        }
     }
     // testing Part 1
     console.log("PART 1 Sample Data");
@@ -56,3 +65,12 @@
     console.log(apple.toString());
     console.log("Total Value: " + milk.getTotalValue());
     console.log(milk.toString());
+
+    // PART 3
+    console.log("PART 3 Sample Data");
+    // Input: 10% discount
+    ProductProperties.applyDiscount([apple, milk, candy], 0.1);
+    // Output: new product details
+    console.log("Discounted: " + apple.toString());
+    console.log("Discounted: " + milk.toString());
+    console.log("Discounted: " + candy.toString());
