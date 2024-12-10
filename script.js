@@ -36,14 +36,16 @@
     // New property: expirationDate (string).
 
     class PerishableProductProperties extends ProductProperties {
+        // constructor: Initializes all properties, including expirationDate.
         constructor(name, price, quantity, expirationDate) {
             super(name, price, quantity);
             this.expirationDate = expirationDate;
         }
-        
+        toString() {
+            // Override toString(): Adds the expiration date to the string representation (e.g., "Product: Milk, Price: $1.50, Quantity: 10, Expiration Date: 2024-12-31").
+            return `Product: ${this.name}, Price: $${this.price.toFixed(2)}, Quantity: ${this.quantity}, Expiration Date: ${this.expirationDate}`;
+            }
+
     }
 
-    // Methods:
-    // constructor: Initializes all properties, including expirationDate.
-    // Override toString(): Adds the expiration date to the string representation (e.g., "Product: Milk, Price: $1.50, Quantity: 10, Expiration Date: 2024-12-31").
     // Task: Create at least two instances of this class with sample data.
