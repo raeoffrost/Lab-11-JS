@@ -49,9 +49,9 @@
 
     }
     console.log("PART 2 Sample Data");
-    // Task: Create at least two instances of this class with sample data.
-    let apple = new ProductProperties("Apple", 0.79, 52);
-    let milk = new ProductProperties("Milk", 4.99, 12);
+    // two instances of this class with sample data
+    let apple = new PerishableProductProperties("Apple", 0.79, 52, "2024-12-17");
+    let milk = new PerishableProductProperties("Milk", 4.99, 12, "2024-12-21");
     console.log("Total Value: " + apple.getTotalValue());
     console.log(apple.toString());
     console.log("Total Value: " + milk.getTotalValue());
