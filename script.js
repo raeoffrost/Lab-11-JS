@@ -104,12 +104,14 @@
 
         }
     }
-    
+    // declare store
     let grocery = new Store([apple, milk, candy]);
+    // see initial product list
     console.log("Old Product List:" + JSON.stringify(grocery));
+    // add soup
     grocery.addProduct(soup);
+    // see new product list
     console.log("New Product List:" + JSON.stringify(grocery));
 
-    const item = Object.getOwnPropertyDescriptors(grocery);
-   
+    // total value of apple, milk, candy and soup
     console.log(grocery.getInventoryValue());
