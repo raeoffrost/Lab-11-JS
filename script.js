@@ -74,3 +74,17 @@
     console.log("Discounted: " + apple.toString());
     console.log("Discounted: " + milk.toString());
     console.log("Discounted: " + candy.toString());
+
+
+    // Part 4
+
+    // Create a Store Class
+    class Store{
+
+    }
+
+    // Properties inventory (array): Stores Product and PerishableProduct objects.
+    // Methods: 
+    // addProduct(product): Adds a product to the inventory.
+    // getInventoryValue(): Returns the total value of all products in the inventory.
+    // findProductByName(name): Finds a product by its name and returns it, or returns null if not found.
