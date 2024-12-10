@@ -8,7 +8,9 @@
         //     constructor: Initializes the properties.
         constructor(name, price, quantity) {
             this.name = name;
-            this.price = price;
+            // added toFixed(2) to ensure number would output with 2 decimal places 
+            // even if they are not added and after discounts are applied
+            this.price = (price.toFixed(2));
             this.quantity = quantity;
         }
 
@@ -18,15 +20,14 @@
         }
         toString() {
         //     toString(): Returns a string representation of the product (e.g., "Product: Apple, Price: $2.50, Quantity: 50").
-        // added toFixed(2) to ensure number would output with 2 decimal places even if they are not added
-        return `Product: ${this.name}, Price: $${this.price.toFixed(2)}, Quantity: ${this.quantity}`;
+        return `Product: ${this.name}, Price: $${this.price}, Quantity: ${this.quantity}`;
         }
         // Add a Static Method to the Product Class Method for discounts
         static applyDiscount(products, discount){
         let newPrice = 0;
         products.forEach((products) => {
                 newPrice = (products.price - (products.price * discount));
-                products.price = newPrice;
+                products.price = (newPrice.toFixed(2));
             });
             return products;
         }
@@ -53,7 +54,7 @@
         }
         toString() {
             // Override toString(): Adds the expiration date to the string representation (e.g., "Product: Milk, Price: $1.50, Quantity: 10, Expiration Date: 2024-12-31").
-            return `Product: ${this.name}, Price: $${this.price.toFixed(2)}, Quantity: ${this.quantity}, Expiration Date: ${this.expirationDate}`;
+            return `Product: ${this.name}, Price: $${this.price}, Quantity: ${this.quantity}, Expiration Date: ${this.expirationDate}`;
             }
 
     }
