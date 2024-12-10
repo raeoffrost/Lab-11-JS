@@ -11,10 +11,9 @@
             this.quantity = quantity;
         }
 
-        getTotalValue(price, quantity) {
+        getTotalValue() {
         //     getTotalValue(): Returns the total value of the product in stock (price * quantity).
-            const total = (price * quantity);
-            console.log(`Total Value: ${total}`);
+            return this.price * this.quantity;
         }
         toString() {
         //     toString(): Returns a string representation of the product (e.g., "Product: Apple, Price: $2.50, Quantity: 50").
