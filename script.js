@@ -80,10 +80,12 @@
 
     // Create a Store Class
     class Store{
-
+        // constructor: inventory (array): Stores Product and PerishableProduct objects.
+        constructor(product) {
+            this.product = product;
+        }
     }
 
-    // Properties inventory (array): Stores Product and PerishableProduct objects.
     // Methods: 
     // addProduct(product): Adds a product to the inventory.
     // getInventoryValue(): Returns the total value of all products in the inventory.
