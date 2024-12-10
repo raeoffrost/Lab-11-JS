@@ -86,7 +86,7 @@
         }
         // Adds a product to the inventory.
         addProduct(product){
-
+            this.product.push(product);
         }
         // Returns the total value of all products in the inventory.
         getInventoryValue(){
@@ -97,3 +97,7 @@
 
         }
     }
+    let grocery = new Store([apple, milk, candy]);
+    console.log("Old Product List:" + JSON.stringify(grocery));
+    grocery.addProduct(soup);
+    console.log("New Product List:" + JSON.stringify(grocery));
