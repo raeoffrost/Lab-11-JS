@@ -23,10 +23,11 @@
         }
     }
     // testing Part 1
-    let apple = new ProductProperties("Apple", 0.79, 24);
+    console.log("PART 1 Sample Data");
+    let soup = new ProductProperties("Soup", 1.79, 24);
     let candy = new ProductProperties("Candy", 1, 24);
-    console.log(apple.getTotalValue());
-    console.log(apple.toString());
+    console.log(soup.getTotalValue());
+    console.log(soup.toString());
     console.log(candy.getTotalValue());
     console.log(candy.toString());
 
@@ -47,5 +48,11 @@
             }
 
     }
-
+    console.log("PART 2 Sample Data");
     // Task: Create at least two instances of this class with sample data.
+    let apple = new ProductProperties("Apple", 0.79, 52);
+    let milk = new ProductProperties("Milk", 4.99, 12);
+    console.log(apple.getTotalValue());
+    console.log(apple.toString());
+    console.log(milk.getTotalValue());
+    console.log(milk.toString());
