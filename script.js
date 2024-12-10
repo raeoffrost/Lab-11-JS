@@ -84,9 +84,16 @@
         constructor(product) {
             this.product = product;
         }
-    }
+        // Adds a product to the inventory.
+        addProduct(product){
 
-    // Methods: 
-    // addProduct(product): Adds a product to the inventory.
-    // getInventoryValue(): Returns the total value of all products in the inventory.
-    // findProductByName(name): Finds a product by its name and returns it, or returns null if not found.
+        }
+        // Returns the total value of all products in the inventory.
+        getInventoryValue(){
+
+        }
+        // Finds a product by its name and returns it, or returns null if not found.
+        findProductByName(name){
+
+        }
+    }
