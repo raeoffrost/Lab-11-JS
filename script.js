@@ -61,7 +61,7 @@
 
      // Part 2 Data
     console.log("PART 2 Sample Data");
-    
+
     // two instances of this class with sample data
     let apple = new PerishableProductProperties("Apple", 0.79, 52, "2024-12-17");
     let milk = new PerishableProductProperties("Milk", 4.99, 12, "2024-12-21");
@@ -72,8 +72,10 @@
 
     // PART 3
     console.log("PART 3 Sample Data");
+    
     // Input: 10% discount
     ProductProperties.applyDiscount([apple, milk, candy], 0.1);
+    
     // Output: new product details
     console.log("Discounted: " + apple.toString());
     console.log("Discounted: " + milk.toString());
