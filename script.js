@@ -97,7 +97,7 @@
             let fullPrice = item.getTotalValue()
             total += fullPrice;
            });
-           return total;
+           return total.toFixed(2);
         }
         // Finds a product by its name and returns it, or returns null if not found.
         findProductByName(name){
