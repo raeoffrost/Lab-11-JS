@@ -108,6 +108,7 @@
                     return null;
                 }}}
     }
+    console.log("PART 4 Sample Data");
     // declare store
     let grocery = new Store([apple, milk, candy]);
     // see initial product list
@@ -121,3 +122,21 @@
     console.log(grocery.getInventoryValue());
     // find apple by name, case insensitive
     console.log(grocery.findProductByName("APPLE"));
+
+    // Part 5
+    console.log("PART 5 Sample Data");
+    // Create at 5 products, including at 2 PerishableProduct objects.
+    let cereal = new PerishableProductProperties("Cereal", 3.99, 24, "2025-01-20"); // 1 perishable
+    let bread = new PerishableProductProperties("Bread", 3, 12, "2024-12-23"); // 2 perishable
+    let candle = new ProductProperties("Candle", 5, 12); // 3
+    let mug = new ProductProperties("Mug", 6.99, 6); // 4
+    let pencil = new ProductProperties("Pencil", 0.50, 32); // 5
+    // Print the total inventory value before 15% discount.
+    let partFive = new Store([cereal, bread, candle, mug, pencil]);
+    console.log("Total Inventory Value: " +  partFive.getInventoryValue());
+    // Input: 15% discount
+    ProductProperties.applyDiscount(partFive.product, 0.15);
+    // and after applying a 15% discount.
+    console.log("Total Inventory Value: " +  partFive.getInventoryValue());
+    // ProductProperties.applyDiscount([apple, milk, candy], 0.1);
+    // Find and print the details of a specific product by its name.
