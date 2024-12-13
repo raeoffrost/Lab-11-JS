@@ -133,10 +133,11 @@
     let pencil = new ProductProperties("Pencil", 0.50, 32); // 5
     // Print the total inventory value before 15% discount.
     let partFive = new Store([cereal, bread, candle, mug, pencil]);
-    console.log("Total Inventory Value: " +  partFive.getInventoryValue());
+    console.log("Total Inventory Value Before: " +  partFive.getInventoryValue());
     // Input: 15% discount
     ProductProperties.applyDiscount(partFive.product, 0.15);
     // and after applying a 15% discount.
-    console.log("Total Inventory Value: " +  partFive.getInventoryValue());
-    // ProductProperties.applyDiscount([apple, milk, candy], 0.1);
+    console.log("Total Inventory Value After: " +  partFive.getInventoryValue());
     // Find and print the details of a specific product by its name.
+    console.log(partFive.findProductByName("CEREAL"));
+    console.log(partFive.findProductByName("nonexistent product"));
