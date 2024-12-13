@@ -15,11 +15,11 @@
         }
 
         getTotalValue() {
-        //     getTotalValue(): Returns the total value of the product in stock (price * quantity).
+        // getTotalValue(): Returns the total value of the product in stock (price * quantity).
             return this.price * this.quantity;
         }
         toString() {
-        //     toString(): Returns a string representation of the product (e.g., "Product: Apple, Price: $2.50, Quantity: 50").
+        // toString(): Returns a string representation of the product (e.g., "Product: Apple, Price: $2.50, Quantity: 50").
         return `Product: ${this.name}, Price: $${this.price}, Quantity: ${this.quantity}`;
         }
         // Add a Static Method to the Product Class Method for discounts
@@ -32,7 +32,7 @@
             return products;
         }
     }
-    // testing Part 1
+    // Part 1 Data
     console.log("PART 1 Sample Data");
     let soup = new ProductProperties("Soup", 1.79, 24);
     let candy = new ProductProperties("Candy", 1, 24);
@@ -58,7 +58,10 @@
             }
 
     }
+
+     // Part 2 Data
     console.log("PART 2 Sample Data");
+    
     // two instances of this class with sample data
     let apple = new PerishableProductProperties("Apple", 0.79, 52, "2024-12-17");
     let milk = new PerishableProductProperties("Milk", 4.99, 12, "2024-12-21");
@@ -125,19 +128,24 @@
 
     // Part 5
     console.log("PART 5 Sample Data");
+
     // Create at 5 products, including at 2 PerishableProduct objects.
     let cereal = new PerishableProductProperties("Cereal", 3.99, 24, "2025-01-20"); // 1 perishable
     let bread = new PerishableProductProperties("Bread", 3, 12, "2024-12-23"); // 2 perishable
     let candle = new ProductProperties("Candle", 5, 12); // 3
     let mug = new ProductProperties("Mug", 6.99, 6); // 4
     let pencil = new ProductProperties("Pencil", 0.50, 32); // 5
+
     // Print the total inventory value before 15% discount.
     let partFive = new Store([cereal, bread, candle, mug, pencil]);
     console.log("Total Inventory Value Before: " +  partFive.getInventoryValue());
+
     // Input: 15% discount
     ProductProperties.applyDiscount(partFive.product, 0.15);
+
     // and after applying a 15% discount.
     console.log("Total Inventory Value After: " +  partFive.getInventoryValue());
+
     // Find and print the details of a specific product by its name.
     console.log(partFive.findProductByName("CEREAL"));
     console.log(partFive.findProductByName("nonexistent product"));
