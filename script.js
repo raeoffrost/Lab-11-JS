@@ -102,16 +102,11 @@
         // Finds a product by its name and returns it, or returns null if not found.
         findProductByName(name){
             for(const item of this.product){
-                if (item.name.toLowerCase() == name.toLowerCase()){
-                console.log("Item found.");
-                return true;
-                    }
-                else{
-                console.log("Item not found.");
-                return false;
-                }
-            }
-        }
+                if (item.name.toLowerCase() == name.toLowerCase()){ 
+                    return item;
+                    }else{
+                    return null;
+                }}}
     }
     // declare store
     let grocery = new Store([apple, milk, candy]);
@@ -124,4 +119,5 @@
 
     // total value of apple, milk, candy and soup
     console.log(grocery.getInventoryValue());
-    grocery.findProductByName("APPLE");
+    // find apple by name, case insensitive
+    console.log(grocery.findProductByName("APPLE"));
